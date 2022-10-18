@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>能源与智能工程学院招生数据</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <!-- 头部 -->
+    <header>
+      <h1>2022年能源与智能工程学院招生大数据</h1>
+      <div class="show-time"></div>
+      <script>
+        var t = null;
+        t = setTimeout(time, 1000); //开始运行
+        function time() {
+          clearTimeout(t); //清除定时器
+          dt = new Date();
+          var y = dt.getFullYear();
+          var mt = dt.getMonth() + 1;
+          var day = dt.getDate();
+          var h = dt.getHours(); //获取时
+          var m = dt.getMinutes(); //获取分
+          var s = dt.getSeconds(); //获取秒
+          document.querySelector(".show-time").innerHTML =
+            "当前时间：" +
+            y +
+            "年" +
+            mt +
+            "月" +
+            day +
+            "日-" +
+            h +
+            "时" +
+            m +
+            "分" +
+            s +
+            "秒";
+          t = setTimeout(time, 1000); //设定定时器，循环运行
+        }
+      </script>
+    </header>
+
+    <!-- 页面主体 -->
+    <section class="mainbox">
+      <!-- 左侧盒子 -->
+      <div class="column">
+        <div class="panel pie">
+          <h2>男女比例</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel bar">
+          <h2>年龄分布</h2>
+          <!-- 图表放置盒子 -->
+          <div class="chart"></div>
+          <!-- 伪元素绘制盒子下边角 -->
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel pie2">
+          <h2>新生多维数据</h2>
+          <!-- <div class="chart"></div> -->
+          <div class="panel-footer"></div>
+          <div class="chart-div chart-done">
+            <table class="data-t">
+              <tr>
+                <th><img src="images/class.png" /></th>
+                <td>
+                  <p><span id="listedCompany">10</span></p>
+                  <p>新生班级(个)</p>
+                </td>
+                <th><img src="images/dormitory.png" /></th>
+                <td>
+                  <p><span id="listedSecurity">97</span></p>
+                  <p>宿舍(间)</p>
+                </td>
+              </tr>
+              <tr>
+                <th><img src="images/grant.png" /></th>
+                <td>
+                  <p><span id="totalMarket">29.51</span></p>
+                  <p>助学金覆盖比例(%)</p>
+                </td>
+                <th><img src="images/league.png" /></th>
+                <td>
+                  <p><span id="circulationMarket">7</span></p>
+                  <p>学生社团(个)</p>
+                </td>
+              </tr>
+              <!-- <tr>
+                <th><img src="img/icon-05.png" /></th>
+                <td>
+                  <p><span id="shRatio">0</span></p>
+                  <p>上市平均市盈率</p>
+                </td>
+                <th><img src="img/icon-06.png" /></th>
+                <td>
+                  <p><span id="szRatio">0</span></p>
+                  <p>深市平均市盈率</p>
+                </td>
+              </tr> -->
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- 中间盒子 -->
+      <div class="column">
+        <!-- 头部 no模块 -->
+        <div class="no">
+          <div class="no-hd">
+            <ul>
+              <li>515</li>
+              //<li>1604</li>
+            </ul>
+          </div>
+          <div class="no-bd">
+            <ul>
+              <li>22级新生人数</li>
+              <li>全院学生人数</li>
+            </ul>
+          </div>
+        </div>
+        <!-- map模块 -->
+        <div class="map">
+          <div class="no">
+            <div class="no-bd">
+              <ul>
+                <li>省外生源</li>
+              </ul>
+            </div>
+          </div>
+          <div class="map1"></div>
+          <div class="map2"></div>
+          <div class="map3"></div>
+          <div class="chart"></div>
+        </div>
+      </div>
+      <!-- 右侧盒子 -->
+      <div class="column">
+        <div class="panel bar2">
+          <h2>各专业人数</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel line2">
+          <h2>各省份投档线超本科线情况</h2>
+          <div class="panel-footer-item1">
+            <div class="panel-column">
+              省份
+            </div>
+            <div class="panel-column">
+            投档线
+            </div>
+            <div class="panel-column">
+            本（理）科线
+            </div>
+          </div>
+          <div class="panel-footer-ctn">
+            <div class="panel-footer-item">
+              <div class="panel-column">
+                河南省
+              </div>
+              <div class="panel-column">
+              476
+              </div>
+              <div class="panel-column">
+              405
+              </div>
+            </div>
+            <div class="panel-footer-item1">
+              <div class="panel-column">
+                陕西省
+              </div>
+              <div class="panel-column">
+              414
+              </div>
+              <div class="panel-column">
+              344
+              </div>
+            </div>
+            <div class="panel-footer-item">
+              <div class="panel-column">
+                河北省
+              </div>
+              <div class="panel-column">
+              469
+              </div>
+              <div class="panel-column">
+              430
+              </div>
+            </div>
+            <!-- <div class="panel-footer-item">
+              <div class="panel-column">
+                山西省
+              </div>
+              <div class="panel-column">
+              427
+              </div>
+              <div class="panel-column">
+              417
+              </div>
+            </div>             -->
+          <!-- </div>     -->
+          <div class="panel-footer-item1">
+            <div class="panel-column">
+              安徽省
+            </div>
+            <div class="panel-column">
+            462
+            </div>
+            <div class="panel-column">
+            435
+            </div>
+          </div>  
+          <!-- <div class="panel-footer-item">
+            <div class="panel-column">
+              吉林省
+            </div>
+            <div class="panel-column">
+            306
+            </div>
+            <div class="panel-column">
+            305
+            </div>
+          </div>   -->
+          <div class="panel-footer-item">
+            <div class="panel-column">
+              重庆市
+            </div>
+            <div class="panel-column">
+            464
+            </div>
+            <div class="panel-column">
+            411
+            </div>
+          </div>                    
+        </div>                 
+        </div> 
+        <div class="panel pie3">
+          <h2>省内生源分布</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>       
+      </div>
+    </section>
+
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <!-- 引入china.js 完成地图模块 -->
+    <script src="js/china.js"></script>
+    <script src="js/index.js"></script>
+    <script type="text/javascript">
+			$(function() {
+				//获取当天日期
+				(function() {
+					const now = new Date();
+					const year = now.getFullYear();
+					const month = now.getMonth()+1;
+					const day = now.getDate();
+					$("#nowDate").html(year+"年"+month+"月"+day+"日");
+				})();
+				
+				const data ={
+	"listed_companies_total": 3574,
+	"listed_securities_total": 20018,
+	"total_market_value": 455294.1,
+	"circulation_market_value": 370447.9,
+	// "sh_pe_ratio": 13.16,
+	// "sz_pe_ratio": 20.99	
+}
+					//console.log('Data: ', data);
+					rollNum("listedCompany", 0, data.listed_companies_total);
+					rollNum("listedSecurity", 0, data.listed_securities_total);
+					rollNum("totalMarket", 0, data.total_market_value, 2);
+					rollNum("circulationMarket", 0, data.circulation_market_value, 2);
+					rollNum("shRatio", 0, data.sh_pe_ratio, 2);
+					rollNum("szRatio", 0, data.sz_pe_ratio, 2);
+        });
+			</script>   
+  </body>
+</html>
+
+<style>
+  .panel-footer-ctn {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .panel-footer-item {
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    background-color: #85ceea;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+  }
+  .panel-column {
+      flex: 1;
+    }
+    .panel-footer-item1 {
+      width: 100%;
+      height: 50px;
+      font-size: 15px;
+      background-color: #70bbe5;
+      display: flex;
+      flex-direction: row;
+      color: white;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 10px;
+    }
+</style>
