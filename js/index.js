@@ -268,7 +268,7 @@
     }],
     // 系列列表配置
     series: [{
-      name: '直接访问',
+      //name: '直接访问',
       type: 'bar',
       barWidth: '35%',
       // ajax传动态数据
@@ -529,6 +529,10 @@
       subtext: '*非全部地市',
       left: 'right'
     },
+    tooltip: {
+      trigger: 'item',
+      //formatter: '{a} <br/>{b}: {c} ({d}%)'
+    },
     series: [
       {
         type: 'pie',
@@ -713,7 +717,7 @@
       name: '西安'
     }, {
       name: '郑州',
-      value: 100
+      value: 16
     }]
   ];
 
@@ -722,7 +726,7 @@
       name: '石家庄'
     }, {
       name: '郑州',
-      value: 100
+      value: 10
     }]
   ];
 
@@ -731,7 +735,7 @@
       name: '太原'
     }, {
       name: '郑州',
-      value: 100
+      value: 8
     }]
   ];
 
@@ -740,7 +744,7 @@
       name: '合肥'
     }, {
       name: '郑州',
-      value: 100
+      value: 6
     }]
   ];
   var YJData = [
@@ -748,7 +752,7 @@
       name: '长春'
     }, {
       name: '郑州',
-      value: 100
+      value: 4
     }]
   ];
   var YSData = [
@@ -756,7 +760,7 @@
       name: '重庆'
     }, {
       name: '郑州',
-      value: 100
+      value: 2
     }]
   ];
   var planePath = 'path://M1705.06,1318.313v-89.254l-319.9-221.799l0.073-208.063c0.521-84.662-26.629-121.796-63.961-121.491c-37.332-0.305-64.482,36.829-63.961,121.491l0.073,208.063l-319.9,221.799v89.254l330.343-157.288l12.238,241.308l-134.449,92.931l0.531,42.034l175.125-42.917l175.125,42.917l0.531-42.034l-134.449-92.931l12.238-241.308L1705.06,1318.313z';
@@ -783,7 +787,7 @@
 
   };
 
-  var color = ["#C0C0C0", '#ffa022', "#D9D919","#56D0E3", "#FF0000", "#8B78F6"]; //航线的颜色
+  var color = ["#C0C0C0", '#ffa022', "#56D0E3", "#FF0000", "#8B78F6","#D9D919",]; //航线的颜色
   var series = [];
   [
     ['西安', XAData],
@@ -794,26 +798,25 @@
     ['重庆',YSData],
   ].forEach(function (item, i) {
     series.push({
-      name: '陕西' + ' Top1',
+      // name: '陕西',
       type: 'lines',
       zlevel: 1,
       effect: {
         show: true,
         period: 6,
         trailLength: 0.7,
-        //color: 'red', //arrow箭头的颜色
         symbolSize: 3
       },
       lineStyle: {
         normal: {
           color: color[i],
-          width: 1,
+          width: 1.2,
           curveness: 0.2
         }
       },
       data: convertData(item[1])
     }, {
-      name: '河北' + ' Top2',
+      // name: '河北' ,
       type: 'lines',
       zlevel: 2,
       symbol: ['none', 'arrow'],
@@ -828,7 +831,7 @@
       lineStyle: {
         normal: {
           color: color[i],
-          width: 1,
+          width: 1.2,
           opacity: 0.6,
           curveness: 0.2
         }
@@ -836,7 +839,7 @@
       data: convertData(item[1])
     }, 
     {
-      name: '山西' + ' Top3',
+      // name: '山西',
       type: 'lines',
       zlevel: 3,
       effect: {
@@ -845,7 +848,15 @@
         trailLength: 0.7,
         color: 'grey', //arrow箭头的颜色
         symbolSize: 3
-      }
+      },
+      lineStyle: {
+        normal: {
+          color: color[2],
+          width: 1.2,
+          opacity: 0.6,
+          curveness: 0.2
+        }
+      },
     },
     {
       type: 'effectScatter',
